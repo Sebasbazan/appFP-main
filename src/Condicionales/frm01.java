@@ -98,9 +98,9 @@ public class frm01 extends JFrame {
 
               
             if (unidades > 50) {  
-                descuento = importTotal * 0.15; // 15%  
+                descuento = importTotal * 0.15; 
             } else {  
-                descuento = importTotal * 0.05; // 5%  
+                descuento = importTotal * 0.05;  
             }  
 
               

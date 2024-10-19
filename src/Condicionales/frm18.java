@@ -24,13 +24,13 @@ public class frm18 extends JFrame {
     }
 
     public frm18() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el monto de donación
+        
         JLabel lblMontoDonacion = new JLabel("Monto de Donación:");
         lblMontoDonacion.setBounds(30, 30, 150, 30);
         getContentPane().add(lblMontoDonacion);
@@ -39,12 +39,12 @@ public class frm18 extends JFrame {
         txtMontoDonacion.setBounds(200, 30, 150, 30);
         getContentPane().add(txtMontoDonacion);
 
-        // Botón para calcular la distribución
+        
         btnCalcular = new JButton("Calcular Distribución");
         btnCalcular.setBounds(200, 70, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el centro de salud
+        
         JLabel lblCentroSalud = new JLabel("Centro de Salud:");
         lblCentroSalud.setBounds(30, 110, 150, 30);
         getContentPane().add(lblCentroSalud);
@@ -54,7 +54,7 @@ public class frm18 extends JFrame {
         txtCentroSalud.setFocusable(false);
         getContentPane().add(txtCentroSalud);
 
-        // Etiqueta y campo de texto para el comedor
+        
         JLabel lblComedor = new JLabel("Comedor de Niños:");
         lblComedor.setBounds(30, 150, 150, 30);
         getContentPane().add(lblComedor);
@@ -64,7 +64,7 @@ public class frm18 extends JFrame {
         txtComedor.setFocusable(false);
         getContentPane().add(txtComedor);
 
-        // Etiqueta y campo de texto para la bolsa
+        
         JLabel lblBolsa = new JLabel("Inversiones en Bolsa:");
         lblBolsa.setBounds(30, 190, 150, 30);
         getContentPane().add(lblBolsa);
@@ -74,7 +74,7 @@ public class frm18 extends JFrame {
         txtBolsa.setFocusable(false);
         getContentPane().add(txtBolsa);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

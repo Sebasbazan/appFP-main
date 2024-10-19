@@ -24,13 +24,13 @@ public class frm26 extends JFrame {
     }
 
     public frm26() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el monto de compra
+        
         JLabel lblMontoCompra = new JLabel("Monto de Compra:");
         lblMontoCompra.setBounds(30, 30, 150, 30);
         getContentPane().add(lblMontoCompra);
@@ -39,12 +39,12 @@ public class frm26 extends JFrame {
         txtMontoCompra.setBounds(200, 30, 150, 30);
         getContentPane().add(txtMontoCompra);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(200, 70, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el préstamo
+        
         JLabel lblPrestamo = new JLabel("Préstamo:");
         lblPrestamo.setBounds(30, 110, 150, 30);
         getContentPane().add(lblPrestamo);
@@ -54,7 +54,7 @@ public class frm26 extends JFrame {
         txtPrestamo.setFocusable(false);
         getContentPane().add(txtPrestamo);
 
-        // Etiqueta y campo de texto para el dinero propio
+        
         JLabel lblPropioDinero = new JLabel("Dinero Propio:");
         lblPropioDinero.setBounds(30, 150, 150, 30);
         getContentPane().add(lblPropioDinero);
@@ -64,7 +64,7 @@ public class frm26 extends JFrame {
         txtPropioDinero.setFocusable(false);
         getContentPane().add(txtPropioDinero);
 
-        // Etiqueta y campo de texto para el interés
+        
         JLabel lblInteres = new JLabel("Interés (10%):");
         lblInteres.setBounds(30, 190, 150, 30);
         getContentPane().add(lblInteres);
@@ -74,7 +74,7 @@ public class frm26 extends JFrame {
         txtInteres.setFocusable(false);
         getContentPane().add(txtInteres);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

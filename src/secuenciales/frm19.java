@@ -32,7 +32,7 @@ public class frm19 extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
 
-        // Etiqueta y campo para el monto vendido
+    
         JLabel lblMontoVendido = new JLabel("Monto Total Vendido: ");
         lblMontoVendido.setBounds(50, 30, 180, 30);
         getContentPane().add(lblMontoVendido);
@@ -42,7 +42,7 @@ public class frm19 extends JFrame {
         txtMontoVendido.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtMontoVendido);
 
-        // Botón de calcular 
+        
         JButton btnCalcular = new JButton("Calcular Sueldo");
         btnCalcular.setBounds(80, 70, 200, 30);
         getContentPane().add(btnCalcular);
@@ -53,7 +53,7 @@ public class frm19 extends JFrame {
             }
         });
 
-        // Etiqueta para mostrar los resultados 
+       
         lblResultado = new JLabel("Resultado: ");
         lblResultado.setBounds(50, 100, 400, 100);
         getContentPane().add(lblResultado);
@@ -69,7 +69,7 @@ public class frm19 extends JFrame {
             double descuento = sueldoBruto * 0.11;
             double sueldoNeto = sueldoBruto - descuento;
 
-            // Mostrar el resultado 
+           
             String resultado = String.format("Comisión: %.2f | Sueldo Bruto: %.2f | Descuento: %.2f | Sueldo Neto: %.2f",
                     comision, sueldoBruto, descuento, sueldoNeto);
             lblResultado.setText(resultado);

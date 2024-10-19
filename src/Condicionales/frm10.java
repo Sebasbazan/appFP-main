@@ -22,13 +22,13 @@ public class frm10 extends JFrame {
     }
 
     public frm10() {
-        // Configuración de la ventana
+       
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(200, 100, 335, 430);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Crear campos de texto para las notas
+        
         txtNotas = new JTextField[5];
         for (int i = 0; i < 5; i++) {
             JLabel lblNota = new JLabel("Nota " + (i + 1) + ":");
@@ -71,7 +71,7 @@ public class frm10 extends JFrame {
         txtPromedio.setFocusable(false);
         getContentPane().add(txtPromedio);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -84,20 +84,20 @@ public class frm10 extends JFrame {
         try {
             double[] notas = new double[5];
 
-            // Leer las notas desde los campos de texto
+            
             for (int i = 0; i < 5; i++) {
                 notas[i] = Double.parseDouble(txtNotas[i].getText());
             }
 
-            // Calcular la nota mayor y menor
+           
             double notaMayor = Arrays.stream(notas).max().getAsDouble();
             double notaMenor = Arrays.stream(notas).min().getAsDouble();
 
-            // Mostrar las notas eliminadas
+           
             txtNotaMayor.setText(String.valueOf(notaMayor));
             txtNotaMenor.setText(String.valueOf(notaMenor));
 
-            // Calcular el promedio de las tres notas restantes
+            
             double suma = 0.0;
             int count = 0;
             for (double nota : notas) {
@@ -108,7 +108,7 @@ public class frm10 extends JFrame {
             }
             double promedio = suma / count;
 
-            // Mostrar el promedio
+            
             txtPromedio.setText(String.format("%.2f", promedio));
 
         } catch (NumberFormatException e) {

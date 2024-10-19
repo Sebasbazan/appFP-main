@@ -37,7 +37,7 @@ public class frm14 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos para los números
+       
         JLabel lblNum1 = new JLabel("Número 1:");
         lblNum1.setBounds(50, 30, 80, 30);
         getContentPane().add(lblNum1);
@@ -88,7 +88,7 @@ public class frm14 extends JFrame {
         txtNum5.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNum5);
 
-        // Botón para calcular
+       
         JButton btnCalcular = new JButton("Calcular Promedio");
         btnCalcular.setBounds(80, 230, 180, 30);
         getContentPane().add(btnCalcular);
@@ -99,14 +99,14 @@ public class frm14 extends JFrame {
             }
         });
 
-        // Etiqueta para mostrar el resultado
+        
         lblResultado = new JLabel("Promedio: ");
         lblResultado.setBounds(50, 260, 300, 30);
         getContentPane().add(lblResultado);
     }
 
     protected void btnCalcular_actionPerformed() {
-        // Obtener los números ingresados
+        
         double num1 = Double.parseDouble(txtNum1.getText());
         double num2 = Double.parseDouble(txtNum2.getText());
         double num3 = Double.parseDouble(txtNum3.getText());

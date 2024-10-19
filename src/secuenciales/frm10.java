@@ -36,7 +36,7 @@ public class frm10 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        //Etiqueta y campo para el numero 
+        
         JLabel lblNumero = new JLabel("Número (4 cifras):");
         lblNumero.setBounds(50, 50, 120, 30);
         getContentPane().add(lblNumero);
@@ -47,7 +47,7 @@ public class frm10 extends JFrame {
         txtNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero);
 
-        //Boton calcular
+        
         JButton btnCalcular = new JButton("Invertir");
         btnCalcular.setBounds(80, 100, 150, 30);
         getContentPane().add(btnCalcular);
@@ -58,7 +58,7 @@ public class frm10 extends JFrame {
             }
         });
 
-        //Etiqueta para mostrar el resultado 
+        
         lblResultado = new JLabel("Número invertido: ");
         lblResultado.setBounds(50, 150, 250, 30);
         getContentPane().add(lblResultado);
@@ -68,14 +68,14 @@ public class frm10 extends JFrame {
 
     protected void btnCalcular_actionPerformed(){
 
-        //Obten el numero ingresado 
+        
         String numero = txtNumero.getText();
 
-        //Verifica que el numero tiene 4 cifras 
+        
         if (numero.length() == 4 && numero.matches("\\d+")) {
-            //Invertir el resultado 
+            
             String numeroInvertido = new StringBuilder(numero).reverse().toString();
-            //Mostrar el resultado 
+            
             lblResultado.setText("Número invertido: " + numeroInvertido);
         } else {
             lblResultado.setText("Por favor, ingrese un número de 4 cifras.");

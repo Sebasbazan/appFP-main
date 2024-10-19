@@ -30,7 +30,7 @@ public class frm08 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo para el radio
+        
         JLabel lblRadio = new JLabel("Radio(r)");
         lblRadio.setBounds(50, 50, 80, 30);
         getContentPane().add(lblRadio);
@@ -41,7 +41,7 @@ public class frm08 extends JFrame {
         txtRadio.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtRadio);
 
-        // Etiqueta y campo para la altura
+        
         JLabel lblAltura = new JLabel("Altura(h)");
         lblAltura.setBounds(50, 100, 80, 30);
         getContentPane().add(lblAltura);
@@ -52,14 +52,13 @@ public class frm08 extends JFrame {
         txtAltura.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtAltura);
 
-        // Botón para calcular
         JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(80, 150, 150, 30);
         getContentPane().add(btnCalcular);
         
         btnCalcular.addActionListener(e -> btnCalcular_actionPerformed());
 
-        // Etiquetas para mostrar resultados
+        
         lblAreaTotalResultado = new JLabel("Área Total: ");
         lblAreaTotalResultado.setBounds(250, 50, 250, 30);
         getContentPane().add(lblAreaTotalResultado);
@@ -73,14 +72,14 @@ public class frm08 extends JFrame {
         double radio = Double.parseDouble(txtRadio.getText());
         double altura = Double.parseDouble(txtAltura.getText());
 
-        // Cálculo de área y volumen
+        
         double areaBase = Math.PI * Math.pow(radio, 2);
         double areaLateral = 2 * Math.PI * radio * altura;
         double areaTotal = areaBase + areaLateral;
 
         double volumen = areaBase * altura;
 
-        // Mostrar los resultados
+        
         lblAreaTotalResultado.setText("Área Total: " + String.format("%.2f", areaTotal));
         lblVolumenResultado.setText("Volumen: " + String.format("%.2f", volumen));
     }

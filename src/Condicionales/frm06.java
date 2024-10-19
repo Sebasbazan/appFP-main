@@ -20,13 +20,13 @@ public class frm06 extends JFrame {
     }
 
     public frm06() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 410, 325);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos de texto
+        
         JLabel lblEdad1 = new JLabel("Edad 1:");
         lblEdad1.setBounds(30, 30, 150, 30);
         getContentPane().add(lblEdad1);
@@ -73,7 +73,7 @@ public class frm06 extends JFrame {
         txtMenor.setFocusable(false);
         getContentPane().add(txtMenor);
 
-        // Acción del botón Calcular
+       
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

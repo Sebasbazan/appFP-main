@@ -21,14 +21,14 @@ public class frm28 extends JFrame {
     }
 
     public frm28() {
-        // Configuración de la ventana
+        
         setTitle("Conversión de Hora");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 300, 200);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para la hora en formato 24 horas
+        
         JLabel lblHora24 = new JLabel("Hora (24 horas):");
         lblHora24.setBounds(30, 30, 150, 30);
         getContentPane().add(lblHora24);
@@ -37,12 +37,12 @@ public class frm28 extends JFrame {
         txtHora24.setBounds(150, 30, 100, 30);
         getContentPane().add(txtHora24);
 
-        // Botón para convertir la hora
+        
         btnConvertir = new JButton("Convertir");
         btnConvertir.setBounds(150, 70, 100, 30);
         getContentPane().add(btnConvertir);
 
-        // Etiqueta y campo de texto para la hora en formato 12 horas
+       
         JLabel lblHora12 = new JLabel("Hora (12 horas):");
         lblHora12.setBounds(30, 110, 150, 30);
         getContentPane().add(lblHora12);
@@ -52,7 +52,7 @@ public class frm28 extends JFrame {
         txtHora12.setFocusable(false);
         getContentPane().add(txtHora12);
 
-        // Acción del botón Convertir
+        
         btnConvertir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

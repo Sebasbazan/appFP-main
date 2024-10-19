@@ -20,13 +20,13 @@ public class frm08 extends JFrame {
     }
 
     public frm08() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 350, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos de texto
+        
         JLabel lblExamen1 = new JLabel("Nota Examen 1:");
         lblExamen1.setBounds(30, 30, 150, 30);
         getContentPane().add(lblExamen1);
@@ -64,7 +64,7 @@ public class frm08 extends JFrame {
         txtPropinaTotal.setFocusable(false);
         getContentPane().add(txtPropinaTotal);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -73,10 +73,10 @@ public class frm08 extends JFrame {
         });
     }
 
-    //Metodo para calcular la propina total
+    
     private void calcularPropinaTotal(){
         try{
-            //propina base 20 soles
+           
             double propinaBase = 20.0;
             double propinaTotal = propinaBase;
 
@@ -84,7 +84,7 @@ public class frm08 extends JFrame {
             double examen2 = Double.parseDouble(txtExamen2.getText());
             double examen3 = Double.parseDouble(txtExamen3.getText());
 
-            // Incentivo por cada examen aprobado ( nota > = 11)
+            
             if(examen1>=11){
                 propinaTotal +=5;
             }

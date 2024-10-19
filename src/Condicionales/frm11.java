@@ -22,13 +22,13 @@ public class frm11 extends JFrame {
     }
 
     public frm11() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 350, 200);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el número
+        
         JLabel lblNumero = new JLabel("Ingrese un número:");
         lblNumero.setBounds(30, 30, 150, 30);
         getContentPane().add(lblNumero);
@@ -37,12 +37,12 @@ public class frm11 extends JFrame {
         txtNumero.setBounds(200, 30, 100, 30);
         getContentPane().add(txtNumero);
 
-        // Botón para determinar el signo
+        
         btnDeterminar = new JButton("Determinar Signo");
         btnDeterminar.setBounds(200, 70, 100, 30);
         getContentPane().add(btnDeterminar);
 
-        // Etiqueta y campo de texto para el resultado
+        
         JLabel lblResultado = new JLabel("Resultado:");
         lblResultado.setBounds(30, 110, 150, 30);
         getContentPane().add(lblResultado);
@@ -52,7 +52,7 @@ public class frm11 extends JFrame {
         txtResultado.setFocusable(false);
         getContentPane().add(txtResultado);
 
-        // Acción del botón Determinar
+        
         btnDeterminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

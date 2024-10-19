@@ -23,13 +23,13 @@ public class frm19 extends JFrame {
     }
 
     public frm19() {
-        // Configuración de la ventana
+       
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de selección para el sexo
+        
         JLabel lblSexo = new JLabel("Sexo:");
         lblSexo.setBounds(30, 30, 100, 30);
         getContentPane().add(lblSexo);
@@ -38,7 +38,7 @@ public class frm19 extends JFrame {
         cmbSexo.setBounds(200, 30, 150, 30);
         getContentPane().add(cmbSexo);
 
-        // Etiqueta y campo de texto para la edad
+       
         JLabel lblEdad = new JLabel("Edad:");
         lblEdad.setBounds(30, 70, 100, 30);
         getContentPane().add(lblEdad);
@@ -47,12 +47,12 @@ public class frm19 extends JFrame {
         txtEdad.setBounds(200, 70, 150, 30);
         getContentPane().add(txtEdad);
 
-        // Botón para calcular la categoría
+        
         btnCalcular = new JButton("Calcular Categoría");
         btnCalcular.setBounds(200, 110, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para la categoría
+        
         JLabel lblCategoria = new JLabel("Categoría:");
         lblCategoria.setBounds(30, 150, 100, 30);
         getContentPane().add(lblCategoria);
@@ -62,7 +62,7 @@ public class frm19 extends JFrame {
         txtCategoria.setFocusable(false);
         getContentPane().add(txtCategoria);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,14 +78,14 @@ public class frm19 extends JFrame {
             String categoria;
 
             if (sexo.equals("Femenino")) {
-                // Categoría FA si tiene menos de 23 años, FB en caso contrario
+                
                 if (edad < 23) {
                     categoria = "FA";
                 } else {
                     categoria = "FB";
                 }
             } else if (sexo.equals("Masculino")) {
-                // Categoría MA si tiene menos de 25 años, MB en caso contrario
+                
                 if (edad < 25) {
                     categoria = "MA";
                 } else {
@@ -95,7 +95,7 @@ public class frm19 extends JFrame {
                 categoria = "Desconocido";
             }
 
-            // Mostrar la categoría resultante
+            
             txtCategoria.setText(categoria);
 
         } catch (NumberFormatException e) {

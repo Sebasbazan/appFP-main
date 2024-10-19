@@ -35,7 +35,7 @@ public class frm07 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo para la base
+        
 
         JLabel lblBase = new JLabel("Base(b)");
         lblBase.setBounds(50, 50, 80, 30);
@@ -47,7 +47,7 @@ public class frm07 extends JFrame {
         txtBase.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtBase);
 
-        // Etiqueta y campo para la altura 
+         
 
         JLabel lblAltura = new JLabel("Altura(h)");
         lblAltura.setBounds(50, 100, 80, 30);
@@ -59,7 +59,7 @@ public class frm07 extends JFrame {
         txtAltura.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtAltura);
 
-        //Boton para calcular 
+         
 
         JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(80, 150, 150, 30);
@@ -71,7 +71,7 @@ public class frm07 extends JFrame {
             }
         });
 
-        //Etiquetas para mostrar resultados 
+        
         lblAreaResultado = new JLabel("Área: ");
         lblAreaResultado.setBounds(250, 50, 250, 30);
         getContentPane().add(lblAreaResultado);
@@ -83,18 +83,18 @@ public class frm07 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed(){
-        //Obtener los valores de entrada 
+       
         double base = Double.parseDouble(txtBase.getText());
         double altura = Double.parseDouble(txtAltura.getText());
 
-        // Calculo de area 
+       
         double area = base * altura;
 
-        // Calculo de perimetro
+        
 
         double perimetro = 2 * (base + altura );
 
-        // Mostrar los resultados 
+        
         lblAreaResultado.setText("Area: " + String.format("%.2f", area));
         lblPerimetroResultado.setText("Perímetro: " + String.format("%.2f", perimetro));
     }

@@ -22,13 +22,13 @@ public class frm24 extends JFrame {
     }
     
     public frm24() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 250);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el monto vendido
+        
         JLabel lblMontoVendido = new JLabel("Monto Vendido:");
         lblMontoVendido.setBounds(30, 30, 150, 30);
         getContentPane().add(lblMontoVendido);
@@ -37,12 +37,12 @@ public class frm24 extends JFrame {
         txtMontoVendido.setBounds(200, 30, 150, 30);
         getContentPane().add(txtMontoVendido);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(200, 70, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el sueldo
+        
         JLabel lblSueldo = new JLabel("Sueldo Total:");
         lblSueldo.setBounds(30, 110, 150, 30);
         getContentPane().add(lblSueldo);
@@ -52,7 +52,7 @@ public class frm24 extends JFrame {
         txtSueldo.setFocusable(false);
         getContentPane().add(txtSueldo);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -19,13 +19,13 @@ public class frm07 extends JFrame {
         });
     }
     public frm07() {
-        // Configuración de la ventana
+       
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 350, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos de texto
+        
         JLabel lblNum1 = new JLabel("Número 1:");
         lblNum1.setBounds(30, 30, 100, 30);
         getContentPane().add(lblNum1);
@@ -63,7 +63,7 @@ public class frm07 extends JFrame {
         txtIntermedio.setFocusable(false);
         getContentPane().add(txtIntermedio);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -72,7 +72,7 @@ public class frm07 extends JFrame {
         });
     }
 
-    //metodo para calcular el numero intermedio 
+     
     private void calcularNumeroIntermedio(){
         try{
             int num1 = Integer.parseInt(txtNum1.getText());
@@ -82,7 +82,7 @@ public class frm07 extends JFrame {
             int mayor = Math.max(num1, Math.max(num2, num3));
             int menor = Math.min(num1, Math.min(num2, num3));
 
-            //EL INTERMEDIO SE OBTIENE RESTANDO LA SUMA DE LOS TRES NUMERO MENOS EL MAYOR Y MENOR 
+            
             int intermedio = (num1 + num2 + num3) - mayor - menor;
 
             txtIntermedio.setText(String.valueOf(intermedio));

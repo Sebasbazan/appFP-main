@@ -35,7 +35,7 @@ public class frm13 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos para los coeficientes
+        
         JLabel lblA = new JLabel("Coeficiente a:");
         lblA.setBounds(50, 30, 120, 30);
         getContentPane().add(lblA);
@@ -60,7 +60,7 @@ public class frm13 extends JFrame {
         txtC.setBounds(180, 130, 100, 30);
         getContentPane().add(txtC);
 
-        // Botón para calcular
+        
         JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(80, 180, 150, 30);
         getContentPane().add(btnCalcular);
@@ -71,22 +71,22 @@ public class frm13 extends JFrame {
             }
         });
 
-        // Etiqueta para mostrar el resultado
+        
         lblResultado = new JLabel("Resultados: ");
         lblResultado.setBounds(50, 230, 300, 30);
         getContentPane().add(lblResultado);
     }
 
     protected void btnCalcular_actionPerformed() {
-        // Obtener los coeficientes ingresados
+        
         double a = Double.parseDouble(txtA.getText());
         double b = Double.parseDouble(txtB.getText());
         double c = Double.parseDouble(txtC.getText());
 
-        // Calcular el discriminante
+        
         double discriminante = b * b - 4 * a * c;
 
-        // Calcular y mostrar las soluciones
+        
         if (discriminante > 0) {
             double x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
             double x2 = (-b - Math.sqrt(discriminante)) / (2 * a);

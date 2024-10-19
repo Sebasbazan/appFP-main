@@ -24,13 +24,13 @@ public class frm23 extends JFrame {
     }
 
     public frm23() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para la nota de Matemáticas
+        
         JLabel lblNotaMatematicas = new JLabel("Nota en Matemáticas:");
         lblNotaMatematicas.setBounds(30, 30, 150, 30);
         getContentPane().add(lblNotaMatematicas);
@@ -39,7 +39,7 @@ public class frm23 extends JFrame {
         txtNotaMatematicas.setBounds(200, 30, 150, 30);
         getContentPane().add(txtNotaMatematicas);
 
-        // Etiqueta y campo de texto para la nota de Física
+        
         JLabel lblNotaFisica = new JLabel("Nota en Física:");
         lblNotaFisica.setBounds(30, 70, 150, 30);
         getContentPane().add(lblNotaFisica);
@@ -48,12 +48,12 @@ public class frm23 extends JFrame {
         txtNotaFisica.setBounds(200, 70, 150, 30);
         getContentPane().add(txtNotaFisica);
 
-        // Botón para calcular
+       
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(200, 110, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para la propina total
+      
         JLabel lblPropina = new JLabel("Propina Total:");
         lblPropina.setBounds(30, 150, 150, 30);
         getContentPane().add(lblPropina);
@@ -63,7 +63,7 @@ public class frm23 extends JFrame {
         txtPropina.setFocusable(false);
         getContentPane().add(txtPropina);
 
-        // Etiqueta y campo de texto para el obsequio
+       
         JLabel lblObsequio = new JLabel("Obsequio:");
         lblObsequio.setBounds(30, 190, 150, 30);
         getContentPane().add(lblObsequio);
@@ -73,7 +73,7 @@ public class frm23 extends JFrame {
         txtObsequio.setFocusable(false);
         getContentPane().add(txtObsequio);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -88,28 +88,28 @@ public class frm23 extends JFrame {
             double notaFisica = Double.parseDouble(txtNotaFisica.getText());
             double propinaMatematicas, propinaFisica, propinaTotal;
 
-            // Calcular la propina de Matemáticas
+           
             if (notaMatematicas > 17) {
                 propinaMatematicas = 3.0;
             } else {
-                propinaMatematicas = notaMatematicas * 1.0; // S/. 1 por cada punto
+                propinaMatematicas = notaMatematicas * 1.0; 
             }
 
-            // Calcular la propina de Física
+            
             if (notaFisica > 15) {
                 propinaFisica = 2.0;
             } else {
-                propinaFisica = 0.5; // S/. 0.50 en caso contrario
+                propinaFisica = 0.5; 
             }
 
-            // Calcular la propina total
+           
             propinaTotal = propinaMatematicas + propinaFisica;
 
-            // Calcular el promedio y determinar si recibe un reloj
+           
             double promedio = (notaMatematicas + notaFisica) / 2;
             String obsequio = promedio > 16 ? "Reloj" : "Sin obsequio";
 
-            // Mostrar los resultados
+            
             txtPropina.setText(String.format("%.2f", propinaTotal));
             txtObsequio.setText(obsequio);
 

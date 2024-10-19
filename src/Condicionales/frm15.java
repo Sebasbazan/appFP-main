@@ -60,37 +60,37 @@ public class frm15 extends JFrame {
         double sueldoNeto;
 
         try {
-            // Obtener el monto vendido
+            
             montoVendido = Double.parseDouble(txtMontoVendido.getText());
 
-            // Definir la comisión según el monto vendido
+           
             if (montoVendido < 5000) {
-                comision = 0.05; // 5% para menos de 5000
+                comision = 0.05; 
             } else if (montoVendido < 10000) {
-                comision = 0.08; // 8% para entre 5000 y 10000
+                comision = 0.08; 
             } else if (montoVendido < 20000) {
-                comision = 0.10; // 10% para entre 10000 y 20000
+                comision = 0.10; 
             } else {
-                comision = 0.15; // 15% para 20000 o más
+                comision = 0.15; 
             }
 
-            // Calcular el monto de la comisión
+            
             double comisionMonto = montoVendido * comision;
             txtComision.setText(String.valueOf(comisionMonto));
 
-            // Calcular el sueldo bruto (sueldo base + comisión)
+            
             sueldoBruto = sueldoBase + comisionMonto;
             txtSueldoBruto.setText(String.valueOf(sueldoBruto));
 
-            // Calcular el descuento según el sueldo bruto
+            
             if (sueldoBruto > 3500) {
-                descuento = sueldoBruto * 0.15; // 15% si es mayor a 3500
+                descuento = sueldoBruto * 0.15; 
             } else {
-                descuento = sueldoBruto * 0.08; // 8% si no
+                descuento = sueldoBruto * 0.08; 
             }
             txtDescuento.setText(String.valueOf(descuento));
 
-            // Calcular el sueldo neto (sueldo bruto - descuento)
+           
             sueldoNeto = sueldoBruto - descuento;
             txtSueldoNeto.setText(String.valueOf(sueldoNeto));
 

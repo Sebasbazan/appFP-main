@@ -26,13 +26,13 @@ public class frm17 extends JFrame {
     }
 
     public frm17() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 370);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el precio por docena
+        
         JLabel lblPrecioDocena = new JLabel("Precio por Docena:");
         lblPrecioDocena.setBounds(30, 30, 150, 30);
         getContentPane().add(lblPrecioDocena);
@@ -41,7 +41,7 @@ public class frm17 extends JFrame {
         txtPrecioDocena.setBounds(200, 30, 150, 30);
         getContentPane().add(txtPrecioDocena);
 
-        // Etiqueta y campo de texto para la cantidad de docenas
+        
         JLabel lblCantidadDocenas = new JLabel("Cantidad de Docenas:");
         lblCantidadDocenas.setBounds(30, 70, 150, 30);
         getContentPane().add(lblCantidadDocenas);
@@ -50,12 +50,12 @@ public class frm17 extends JFrame {
         txtCantidadDocenas.setBounds(200, 70, 150, 30);
         getContentPane().add(txtCantidadDocenas);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(200, 110, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el monto de compra
+        
         JLabel lblMontoCompra = new JLabel("Monto de Compra:");
         lblMontoCompra.setBounds(30, 150, 150, 30);
         getContentPane().add(lblMontoCompra);
@@ -65,7 +65,7 @@ public class frm17 extends JFrame {
         txtMontoCompra.setFocusable(false);
         getContentPane().add(txtMontoCompra);
 
-        // Etiqueta y campo de texto para el descuento
+        
         JLabel lblDescuento = new JLabel("Descuento:");
         lblDescuento.setBounds(30, 190, 100, 30);
         getContentPane().add(lblDescuento);
@@ -75,7 +75,7 @@ public class frm17 extends JFrame {
         txtDescuento.setFocusable(false);
         getContentPane().add(txtDescuento);
 
-        // Etiqueta y campo de texto para el total a pagar
+        
         JLabel lblTotalPagar = new JLabel("Total a Pagar:");
         lblTotalPagar.setBounds(30, 230, 100, 30);
         getContentPane().add(lblTotalPagar);
@@ -85,7 +85,7 @@ public class frm17 extends JFrame {
         txtTotalPagar.setFocusable(false);
         getContentPane().add(txtTotalPagar);
 
-        // Etiqueta y campo de texto para los lapiceros de obsequio
+        
         JLabel lblLapiceros = new JLabel("Lapiceros de Obsequio:");
         lblLapiceros.setBounds(30, 270, 150, 30);
         getContentPane().add(lblLapiceros);
@@ -95,7 +95,7 @@ public class frm17 extends JFrame {
         txtLapiceros.setFocusable(false);
         getContentPane().add(txtLapiceros);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -113,22 +113,22 @@ public class frm17 extends JFrame {
             double totalPagar;
             int lapicerosObsequio = 0;
 
-            // Aplicar el descuento según la cantidad de docenas
+            
             if (cantidadDocenas >= 6) {
-                descuento = montoCompra * 0.15; // 15% de descuento
+                descuento = montoCompra * 0.15; 
             } else {
-                descuento = montoCompra * 0.10; // 10% de descuento
+                descuento = montoCompra * 0.10; 
             }
 
-            // Calcular el total a pagar
+            
             totalPagar = montoCompra - descuento;
 
-            // Calcular los lapiceros de obsequio si aplica
+            
             if (cantidadDocenas >= 30) {
-                lapicerosObsequio = (cantidadDocenas / 3) * 2; // 2 lapiceros por cada 3 docenas
+                lapicerosObsequio = (cantidadDocenas / 3) * 2; 
             }
 
-            // Mostrar los resultados
+           
             txtMontoCompra.setText(String.format("%.2f", montoCompra));
             txtDescuento.setText(String.format("%.2f", descuento));
             txtTotalPagar.setText(String.format("%.2f", totalPagar));

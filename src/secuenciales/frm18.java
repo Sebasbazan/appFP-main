@@ -32,7 +32,7 @@ public class frm18 extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
 
-        // Etiqueta y campo para el precio unitario
+        
         JLabel lblPrecioUnitario = new JLabel("Precio Unitario: ");
         lblPrecioUnitario.setBounds(50, 30, 120, 30);
         getContentPane().add(lblPrecioUnitario);
@@ -42,7 +42,7 @@ public class frm18 extends JFrame {
         txtPrecioUnitario.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtPrecioUnitario);
 
-        // Etiqueta y campo para la cantidad
+        
         JLabel lblCantidad = new JLabel("Cantidad: ");
         lblCantidad.setBounds(50, 70, 120, 30);
         getContentPane().add(lblCantidad);
@@ -52,7 +52,7 @@ public class frm18 extends JFrame {
         txtCantidad.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtCantidad);
 
-        // Botón para calcular
+        
         JButton btnCalcular = new JButton("Calcular Importe");
         btnCalcular.setBounds(80, 110, 150, 30);
         getContentPane().add(btnCalcular);
@@ -63,7 +63,7 @@ public class frm18 extends JFrame {
             }
         });
 
-        // Etiqueta para mostrar los resultados
+        
         lblResultado = new JLabel("Resultado: ");
         lblResultado.setBounds(50, 150, 400, 60);
         getContentPane().add(lblResultado);
@@ -74,23 +74,23 @@ public class frm18 extends JFrame {
             double precioUnitario = Double.parseDouble(txtPrecioUnitario.getText());
             int cantidad = Integer.parseInt(txtCantidad.getText());
 
-            // Calcular el importe de la compra
+            
             double importeCompra = precioUnitario * cantidad;
 
-            // Aplicar el primer descuento del 15%
+            
             double descuento1 = importeCompra * 0.15;
             double precioConDescuento1 = importeCompra - descuento1;
 
-            // Aplicar el segundo descuento del 15%
+            
             double descuento2 = precioConDescuento1 * 0.15;
             double importeFinal = precioConDescuento1 - descuento2;
 
-            // Mostrar los resultados
+           
             String resultado = String.format("Importe Compra: %.2f | Descuento: %.2f | Importe a Pagar: %.2f",
                     importeCompra, descuento1 + descuento2, importeFinal);
             lblResultado.setText(resultado);
             
-            // Ajustar tamaño de la etiqueta para que se muestre todo el texto
+           
             lblResultado.setSize(lblResultado.getPreferredSize());
 
         } catch (NumberFormatException e) {

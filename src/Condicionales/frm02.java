@@ -23,13 +23,13 @@ public class frm02 extends JFrame {
     }  
 
     public frm02() {  
-        // Configuración de la ventana  
+         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         setBounds(100, 100, 400, 350);  
         setLayout(null);  
         setLocationRelativeTo(null);  
 
-        // Etiquetas y campos de texto  
+        
         JLabel lblUnidades = new JLabel("Cantidad de Unidades:");  
         lblUnidades.setBounds(30, 30, 150, 30);  
         getContentPane().add(lblUnidades);  
@@ -78,7 +78,7 @@ public class frm02 extends JFrame {
         txtCaramelos.setFocusable(false);  
         getContentPane().add(txtCaramelos);  
 
-        // Acción del botón Calcular  
+         
         btnCalcular.addActionListener(new ActionListener() {  
             @Override  
             public void actionPerformed(ActionEvent e) {  
@@ -87,7 +87,7 @@ public class frm02 extends JFrame {
         });  
     }  
 
-    // Método para realizar el cálculo  
+     
     private void calcularTotal() {  
         try {  
             int unidades = Integer.parseInt(txtUnidades.getText());  
@@ -97,18 +97,18 @@ public class frm02 extends JFrame {
             double total;  
             int caramelos;  
 
-            // Calcular descuento basado en el total de importación  
+            
             if (importTotal > 700) {  
-                descuento = importTotal * 0.16; // 16% de descuento  
+                descuento = importTotal * 0.16;  
             } else if (importTotal >= 501 && importTotal <= 700) {  
-                descuento = importTotal * 0.14; // 14% de descuento  
+                descuento = importTotal * 0.14;   
             } else {  
-                descuento = importTotal * 0.12; // 12% de descuento  
+                descuento = importTotal * 0.12;   
             }  
 
             total = importTotal - descuento;  
 
-            // Determinar caramelos según las unidades adquiridas  
+            
             if (unidades <= 50) {  
                 caramelos = 5;  
             } else if (unidades <= 100) {  
@@ -117,7 +117,7 @@ public class frm02 extends JFrame {
                 caramelos = 15;  
             }  
 
-            // Formatear y mostrar resultados  
+             
             DecimalFormat df = new DecimalFormat("####.00");  
             txtImporte.setText(df.format(importTotal));  
             txtDescuento.setText(df.format(descuento));  

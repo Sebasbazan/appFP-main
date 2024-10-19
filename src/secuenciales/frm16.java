@@ -34,7 +34,7 @@ public class frm16  extends JFrame{
         setLocationRelativeTo(null);
         setLayout(null);
 
-        //Etiquetas y campos para horas trabajadas y tarifas
+        
         JLabel lblHoras = new JLabel("Horas Trabajadas: ");
         lblHoras.setBounds(50, 30, 120, 30);
         getContentPane().add(lblHoras);
@@ -55,7 +55,7 @@ public class frm16  extends JFrame{
         txtTarifa.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtTarifa);
 
-        //Boton para calcular 
+         
         JButton btnCalcular = new JButton("Calcular Sueldo");
         btnCalcular.setBounds(80, 110, 150, 30);
         getContentPane().add(btnCalcular);
@@ -66,7 +66,7 @@ public class frm16  extends JFrame{
             }
         });
 
-        //Etiqueta para mostrar el suelto
+        
         lblResultado = new JLabel("Resultado: ");
         lblResultado.setBounds(50, 150, 250, 60);
         getContentPane().add(lblResultado);
@@ -77,18 +77,18 @@ public class frm16  extends JFrame{
         double horas = Double.parseDouble(txtHoras.getText());
         double tarifa = Double.parseDouble(txtTarifa.getText());
 
-        //Calculo del sueldo
+       
 
         double sueldoBasico = horas * tarifa;
-        double sueldoBruto = sueldoBasico * 1.20; //20% bonificacion
-        double sueldoNeto = sueldoBruto * 0.90; //10% descuento
+        double sueldoBruto = sueldoBasico * 1.20; 
+        double sueldoNeto = sueldoBruto * 0.90; 
 
-        // Mostrar el resultado
+        
         String resultado = String.format("Sueldo Básico: %.2f | Sueldo Bruto: %.2f | Sueldo Neto: %.2f",
         sueldoBasico, sueldoBruto, sueldoNeto);
         lblResultado.setText(resultado);
 
-        // Ajustar tamaño de la etiqueta para que se muestre todo el texto
+        
         lblResultado.setSize(lblResultado.getPreferredSize());
     }
 

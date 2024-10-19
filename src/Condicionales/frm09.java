@@ -20,13 +20,13 @@ public class frm09 extends JFrame {
     }
 
     public frm09() {
-        // Configuración de la ventana
+       
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 355, 350);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos de texto
+        
         JLabel lblCodigo = new JLabel("Código del Producto:");
         lblCodigo.setBounds(30, 30, 150, 30);
         getContentPane().add(lblCodigo);
@@ -74,7 +74,7 @@ public class frm09 extends JFrame {
         txtTotal.setFocusable(false);
         getContentPane().add(txtTotal);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -91,7 +91,7 @@ public class frm09 extends JFrame {
             double precioUnitario = 0.0;
             double porcentajeDescuento = 0.0;
 
-            // Determinar el precio unitario y el porcentaje de descuento según el código
+            
             switch (codigo) {
                 case 101:
                     precioUnitario = 17;
@@ -114,12 +114,12 @@ public class frm09 extends JFrame {
                     return;
             }
 
-            // Calcular importe, descuento y total a pagar
+            
             double importe = precioUnitario * unidades;
             double descuento = importe * porcentajeDescuento;
             double totalPagar = importe - descuento;
 
-            // Mostrar resultados
+           
             txtImporte.setText(String.format("S/. %.2f", importe));
             txtDescuento.setText(String.format("S/. %.2f", descuento));
             txtTotal.setText(String.format("S/. %.2f", totalPagar));

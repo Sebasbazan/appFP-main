@@ -36,7 +36,7 @@ public class frm15 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiquetas y campos para los aportes
+        
         JLabel lblJuan = new JLabel("Aporte Juan ($):");
         lblJuan.setBounds(30, 30, 120, 30);
         getContentPane().add(lblJuan);
@@ -64,7 +64,7 @@ public class frm15 extends JFrame {
         txtDaniel.setHorizontalAlignment(SwingConstants.RIGHT);
         getContentPane().add(txtDaniel);
 
-        // Botón para calcular
+        
         JButton btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(90, 150, 120, 30);
         getContentPane().add(btnCalcular);
@@ -75,7 +75,7 @@ public class frm15 extends JFrame {
             }
         });
 
-        // Área de texto para mostrar el resultado
+       
         txtResultado = new JTextArea();
         txtResultado.setBounds(30, 190, 250, 100);
         txtResultado.setLineWrap(true);
@@ -89,18 +89,18 @@ public class frm15 extends JFrame {
         double aporteRosa = Double.parseDouble(txtRosa.getText());
         double aporteDaniel = Double.parseDouble(txtDaniel.getText());
 
-        // Convertir el aporte de Daniel a dólares
+        
         double aporteDanielDolares = aporteDaniel / 3.00;
 
-        // Calcular el capital total en dólares
+        
         double capitalTotal = aporteJuan + aporteRosa + aporteDanielDolares;
 
-        // Calcular los porcentajes
+        
         double porcentajeJuan = (aporteJuan / capitalTotal) * 100;
         double porcentajeRosa = (aporteRosa / capitalTotal) * 100;
         double porcentajeDaniel = (aporteDanielDolares / capitalTotal) * 100;
 
-        // Mostrar el resultado en el área de texto
+        
         txtResultado.setText(String.format("Total: $%.2f\nJuan: %.2f%%\nRosa: %.2f%%\nDaniel: %.2f%%", 
             capitalTotal, porcentajeJuan, porcentajeRosa, porcentajeDaniel));
     }

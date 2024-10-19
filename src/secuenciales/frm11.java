@@ -36,7 +36,7 @@ public class frm11 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo para el primer número
+        
         JLabel lblNumero1 = new JLabel("Número 1 (3 cifras):");
         lblNumero1.setBounds(50, 30, 120, 30);
         getContentPane().add(lblNumero1);
@@ -47,7 +47,7 @@ public class frm11 extends JFrame {
         txtNumero1.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero1);
 
-        // Etiqueta y campo para el segundo número
+        
         JLabel lblNumero2 = new JLabel("Número 2 (3 cifras):");
         lblNumero2.setBounds(50, 80, 120, 30);
         getContentPane().add(lblNumero2);
@@ -58,7 +58,7 @@ public class frm11 extends JFrame {
         txtNumero2.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero2);
 
-        // Botón para intercambiar cifras
+        
         JButton btnIntercambiar = new JButton("Intercambiar");
         btnIntercambiar.setBounds(80, 130, 150, 30);
         getContentPane().add(btnIntercambiar);
@@ -69,30 +69,29 @@ public class frm11 extends JFrame {
             }
         });
 
-        // Etiqueta para mostrar el resultado
+        
         lblResultado = new JLabel("Resultado: ");
         lblResultado.setBounds(50, 170, 250, 30);
         getContentPane().add(lblResultado);
     }
 
     protected void btnIntercambiar_actionPerformed() {
-        // Obtener los números ingresados
+        
         String numero1 = txtNumero1.getText();
         String numero2 = txtNumero2.getText();
 
-        // Verificar que ambos números tienen 3 cifras
+        
         if (numero1.length() == 3 && numero2.length() == 3) {
-            // Intercambiar la primera y tercera cifra
+            
             char primera1 = numero1.charAt(0);
             char tercera1 = numero1.charAt(2);
             char primera2 = numero2.charAt(0);
             char tercera2 = numero2.charAt(2);
 
-            // Construir los nuevos números
+           
             String nuevoNumero1 = primera2 + numero1.substring(1, 2) + tercera1;
             String nuevoNumero2 = primera1 + numero2.substring(1, 2) + tercera2;
 
-            // Mostrar el resultado
             lblResultado.setText("Resultado: " + nuevoNumero1 + " y " + nuevoNumero2);
         } else {
             lblResultado.setText("Por favor, ingrese números de 3 cifras.");

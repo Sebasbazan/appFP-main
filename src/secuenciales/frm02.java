@@ -51,7 +51,7 @@ public class frm02 extends JFrame{
         txtMetros.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtMetros);
 
-        //Etiauetas para mostrar los resultados de la conversión
+        
         lblCentimetos = new JLabel("Centímetros:");
         lblCentimetos.setBounds(50, 90, 200, 30);
         getContentPane().add(lblCentimetos);
@@ -68,12 +68,12 @@ public class frm02 extends JFrame{
         lblYardas.setBounds(50, 210, 200, 30);
         getContentPane().add(lblYardas);
 
-        //Boton para relaizar la conversion
+        
         JButton btnConvertir = new JButton("Concertir");
         btnConvertir.setBounds(150, 250, 100, 30);
         getContentPane().add(btnConvertir);
 
-        //Accion al presionar el boton de convertir
+        
         btnConvertir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 btnConvertir_actionPerformed();
@@ -81,16 +81,16 @@ public class frm02 extends JFrame{
         });
     }  
 protected void btnConvertir_actionPerformed(){
-    //toma la cantidad de metros ingresada por el usuario
+  
     double metros = Double.parseDouble(txtMetros.getText());
 
-    //Realiza las conversiones a las diferentes unidades
+    
     double Centímetros = metros * 100;
     double pulgadas = Centímetros / 2.54;
     double pies = pulgadas/ 12;
     double Yardas = pies / 3;
 
-    //Formatea los resultados con dos decimales
+    
     DecimalFormat df = new DecimalFormat("####.##");
     lblCentimetos.setText("Centímetros:" + df.format(Centímetros));
     lblPulgadas.setText("Pulgadas:" + df.format(pulgadas));

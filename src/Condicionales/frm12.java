@@ -22,13 +22,13 @@ public class frm12 extends JFrame {
     }
 
     public frm12() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 200);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el número
+        
         JLabel lblNumero = new JLabel("Ingrese un número (1-7):");
         lblNumero.setBounds(30, 30, 150, 30);
         getContentPane().add(lblNumero);
@@ -37,12 +37,12 @@ public class frm12 extends JFrame {
         txtNumero.setBounds(200, 30, 150, 30);
         getContentPane().add(txtNumero);
 
-        // Botón para determinar el día
+       
         btnDeterminar = new JButton("Determinar Día");
         btnDeterminar.setBounds(200, 70, 150, 30);
         getContentPane().add(btnDeterminar);
 
-        // Etiqueta y campo de texto para el resultado
+       
         JLabel lblDia = new JLabel("Día de la semana:");
         lblDia.setBounds(30, 110, 150, 30);
         getContentPane().add(lblDia);
@@ -52,7 +52,7 @@ public class frm12 extends JFrame {
         txtDia.setFocusable(false);
         getContentPane().add(txtDia);
 
-        // Acción del botón Determinar
+        
         btnDeterminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,7 +92,7 @@ public class frm12 extends JFrame {
                     dia = "Número no válido. Ingrese un número entre 1 y 7.";
             }
 
-            // Mostrar el resultado en el campo correspondiente
+            
             txtDia.setText(dia);
 
         } catch (NumberFormatException e) {

@@ -24,13 +24,13 @@ public class frm14 extends JFrame {
     }
 
     public frm14() {
-        // Configuración de la ventana
+      
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el número de tarjeta
+       
         JLabel lblNumeroTarjeta = new JLabel("Número de la Tarjeta:");
         lblNumeroTarjeta.setBounds(30, 30, 150, 30);
         getContentPane().add(lblNumeroTarjeta);
@@ -39,7 +39,7 @@ public class frm14 extends JFrame {
         txtNumeroTarjeta.setBounds(200, 30, 150, 30);
         getContentPane().add(txtNumeroTarjeta);
 
-        // Etiqueta y campo de texto para el monto de compra
+       
         JLabel lblMontoCompra = new JLabel("Monto de la Compra:");
         lblMontoCompra.setBounds(30, 70, 150, 30);
         getContentPane().add(lblMontoCompra);
@@ -48,12 +48,12 @@ public class frm14 extends JFrame {
         txtMontoCompra.setBounds(200, 70, 150, 30);
         getContentPane().add(txtMontoCompra);
 
-        // Botón para calcular el descuento
+       
         btnCalcular = new JButton("Calcular Descuento");
         btnCalcular.setBounds(200, 110, 200, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el descuento
+       
         JLabel lblDescuento = new JLabel("Descuento:");
         lblDescuento.setBounds(30, 150, 100, 30);
         getContentPane().add(lblDescuento);
@@ -63,7 +63,7 @@ public class frm14 extends JFrame {
         txtDescuento.setFocusable(false);
         getContentPane().add(txtDescuento);
 
-        // Etiqueta y campo de texto para el total
+      
         JLabel lblTotal = new JLabel("Total a Pagar:");
         lblTotal.setBounds(30, 190, 100, 30);
         getContentPane().add(lblTotal);
@@ -73,7 +73,7 @@ public class frm14 extends JFrame {
         txtTotal.setFocusable(false);
         getContentPane().add(txtTotal);
 
-        // Acción del botón Calcular
+    
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,17 +89,17 @@ public class frm14 extends JFrame {
             double descuento;
             double total;
 
-            // Verificar si el número de tarjeta es par y no menor de 100
+           
             if (numeroTarjeta >= 100 && numeroTarjeta % 2 == 0) {
-                descuento = montoCompra * 0.15; // 15% de descuento
+                descuento = montoCompra * 0.15; 
             } else {
-                descuento = montoCompra * 0.05; // 5% de descuento
+                descuento = montoCompra * 0.05; 
             }
 
-            // Calcular el total a pagar
+            
             total = montoCompra - descuento;
 
-            // Mostrar el descuento y el total a pagar
+            
             txtDescuento.setText(String.format("%.2f", descuento));
             txtTotal.setText(String.format("%.2f", total));
 

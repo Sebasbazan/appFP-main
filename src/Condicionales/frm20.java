@@ -24,13 +24,13 @@ public class frm20 extends JFrame {
     }
 
     public frm20() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el número A
+       
         JLabel lblNumeroA = new JLabel("Número A:");
         lblNumeroA.setBounds(30, 30, 100, 30);
         getContentPane().add(lblNumeroA);
@@ -39,7 +39,7 @@ public class frm20 extends JFrame {
         txtNumeroA.setBounds(200, 30, 150, 30);
         getContentPane().add(txtNumeroA);
 
-        // Etiqueta y campo de texto para el número B
+        
         JLabel lblNumeroB = new JLabel("Número B:");
         lblNumeroB.setBounds(30, 70, 100, 30);
         getContentPane().add(lblNumeroB);
@@ -48,7 +48,7 @@ public class frm20 extends JFrame {
         txtNumeroB.setBounds(200, 70, 150, 30);
         getContentPane().add(txtNumeroB);
 
-        // Etiqueta y campo de texto para el número C
+        
         JLabel lblNumeroC = new JLabel("Número C:");
         lblNumeroC.setBounds(30, 110, 100, 30);
         getContentPane().add(lblNumeroC);
@@ -57,12 +57,12 @@ public class frm20 extends JFrame {
         txtNumeroC.setBounds(200, 110, 150, 30);
         getContentPane().add(txtNumeroC);
 
-        // Botón para calcular el orden
+        
         btnCalcular = new JButton("Calcular Orden");
         btnCalcular.setBounds(200, 150, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el resultado
+        
         JLabel lblResultado = new JLabel("Resultado:");
         lblResultado.setBounds(30, 190, 100, 30);
         getContentPane().add(lblResultado);
@@ -72,7 +72,7 @@ public class frm20 extends JFrame {
         txtResultado.setFocusable(false);
         getContentPane().add(txtResultado);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -36,7 +36,7 @@ public class frm09 extends JFrame {
         setLayout(null);
         setLocationRelativeTo(null);
 
-        //Etiqueta y campo para el numero
+        
 
         JLabel lblNumero = new JLabel("Número: ");
         lblNumero.setBounds(50, 50, 80, 30);
@@ -48,7 +48,7 @@ public class frm09 extends JFrame {
         txtNumero.setMargin(new Insets(5, 5, 5, 5));
         getContentPane().add(txtNumero);
 
-        //Boton para calcular 
+       
 
         JButton btnCalcular = new JButton("Calcular Suma");
         btnCalcular.setBounds(80, 100, 150, 30);
@@ -60,7 +60,7 @@ public class frm09 extends JFrame {
             }
         });
 
-        // Etiqueta para mostrar el resultado
+        
         lblResultado = new JLabel("Suma: ");
         lblResultado.setBounds(50, 150, 250, 30);
         getContentPane().add(lblResultado);
@@ -68,17 +68,17 @@ public class frm09 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed(){
-        //Obtener el numero de entrada 
+        
         int numero = Integer.parseInt(txtNumero.getText());
 
-        //Calcular la suma de las cifras 
+       
 
         int suma = 0;
         while (numero > 0 ) {
-            suma += numero % 10; // sumer la ultima cifra 
-            numero /= 10; //Elimina la ultima cifra 
+            suma += numero % 10; 
+            numero /= 10; 
         }
-        //Mostrar el resultado
+        
         lblResultado.setText("Suma: " + suma );
     }
     

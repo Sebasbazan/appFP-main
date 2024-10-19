@@ -24,14 +24,14 @@ public class frm29 extends JFrame {
     }
 
     public frm29() {
-        // Configuración de la ventana
+       
         setTitle("Cálculo de Sueldo");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 340, 330);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para horas trabajadas
+        
         JLabel lblHorasTrabajadas = new JLabel("Horas trabajadas:");
         lblHorasTrabajadas.setBounds(30, 30, 150, 30);
         getContentPane().add(lblHorasTrabajadas);
@@ -40,7 +40,7 @@ public class frm29 extends JFrame {
         txtHorasTrabajadas.setBounds(180, 30, 100, 30);
         getContentPane().add(txtHorasTrabajadas);
 
-        // Etiqueta y campo de texto para tarifa por hora
+        
         JLabel lblTarifaHora = new JLabel("Tarifa por hora:");
         lblTarifaHora.setBounds(30, 70, 150, 30);
         getContentPane().add(lblTarifaHora);
@@ -49,7 +49,7 @@ public class frm29 extends JFrame {
         txtTarifaHora.setBounds(180, 70, 100, 30);
         getContentPane().add(txtTarifaHora);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(180, 110, 100, 30);
         getContentPane().add(btnCalcular);

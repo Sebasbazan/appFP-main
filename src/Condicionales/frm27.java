@@ -25,14 +25,14 @@ public class frm27 extends JFrame {
     }
 
     public frm27() {
-        // Configuración de la ventana
+        
         setTitle("Cálculo de Sueldo de Vendedores");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 360);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el monto vendido
+        
         JLabel lblMontoVendido = new JLabel("Monto Vendido:");
         lblMontoVendido.setBounds(30, 30, 150, 30);
         getContentPane().add(lblMontoVendido);
@@ -41,12 +41,12 @@ public class frm27 extends JFrame {
         txtMontoVendido.setBounds(200, 30, 150, 30);
         getContentPane().add(txtMontoVendido);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(200, 70, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el sueldo bruto
+        
         JLabel lblSueldoBruto = new JLabel("Sueldo Bruto:");
         lblSueldoBruto.setBounds(30, 110, 150, 30);
         getContentPane().add(lblSueldoBruto);
@@ -56,7 +56,7 @@ public class frm27 extends JFrame {
         txtSueldoBruto.setFocusable(false);
         getContentPane().add(txtSueldoBruto);
 
-        // Etiqueta y campo de texto para el descuento
+        
         JLabel lblDescuento = new JLabel("Descuento:");
         lblDescuento.setBounds(30, 150, 150, 30);
         getContentPane().add(lblDescuento);
@@ -66,7 +66,7 @@ public class frm27 extends JFrame {
         txtDescuento.setFocusable(false);
         getContentPane().add(txtDescuento);
 
-        // Etiqueta y campo de texto para el sueldo neto
+        
         JLabel lblSueldoNeto = new JLabel("Sueldo Neto:");
         lblSueldoNeto.setBounds(30, 190, 150, 30);
         getContentPane().add(lblSueldoNeto);
@@ -76,7 +76,7 @@ public class frm27 extends JFrame {
         txtSueldoNeto.setFocusable(false);
         getContentPane().add(txtSueldoNeto);
 
-        // Etiqueta y campo de texto para los polos obsequiados
+        
         JLabel lblPolos = new JLabel("Polos Obsequiados:");
         lblPolos.setBounds(30, 230, 150, 30);
         getContentPane().add(lblPolos);
@@ -86,7 +86,7 @@ public class frm27 extends JFrame {
         txtPolos.setFocusable(false);
         getContentPane().add(txtPolos);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

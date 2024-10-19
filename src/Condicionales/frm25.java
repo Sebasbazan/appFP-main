@@ -24,13 +24,13 @@ public class frm25 extends JFrame {
     }
 
     public frm25() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el sueldo bruto
+        
         JLabel lblSueldoBruto = new JLabel("Sueldo Bruto:");
         lblSueldoBruto.setBounds(30, 30, 150, 30);
         getContentPane().add(lblSueldoBruto);
@@ -39,7 +39,7 @@ public class frm25 extends JFrame {
         txtSueldoBruto.setBounds(200, 30, 150, 30);
         getContentPane().add(txtSueldoBruto);
 
-        // Etiqueta y campo de texto para el número de hijos
+        
         JLabel lblNumeroHijos = new JLabel("Número de Hijos:");
         lblNumeroHijos.setBounds(30, 70, 150, 30);
         getContentPane().add(lblNumeroHijos);
@@ -48,12 +48,12 @@ public class frm25 extends JFrame {
         txtNumeroHijos.setBounds(200, 70, 150, 30);
         getContentPane().add(txtNumeroHijos);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(200, 110, 150, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para la bonificación
+        
         JLabel lblBonificacion = new JLabel("Bonificación:");
         lblBonificacion.setBounds(30, 150, 150, 30);
         getContentPane().add(lblBonificacion);
@@ -63,7 +63,7 @@ public class frm25 extends JFrame {
         txtBonificacion.setFocusable(false);
         getContentPane().add(txtBonificacion);
 
-        // Etiqueta y campo de texto para el sueldo neto
+        
         JLabel lblSueldoNeto = new JLabel("Sueldo Neto:");
         lblSueldoNeto.setBounds(30, 190, 150, 30);
         getContentPane().add(lblSueldoNeto);
@@ -73,7 +73,7 @@ public class frm25 extends JFrame {
         txtSueldoNeto.setFocusable(false);
         getContentPane().add(txtSueldoNeto);
 
-        // Acción del botón Calcular
+        
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

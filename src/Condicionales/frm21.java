@@ -24,13 +24,13 @@ public class frm21 extends JFrame {
     }
 
     public frm21() {
-        // Configuración de la ventana
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 300);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para el número del empleado
+        
         JLabel lblNumero = new JLabel("Número del Empleado:");
         lblNumero.setBounds(30, 30, 150, 30);
         getContentPane().add(lblNumero);
@@ -39,12 +39,12 @@ public class frm21 extends JFrame {
         txtNumero.setBounds(200, 30, 150, 30);
         getContentPane().add(txtNumero);
 
-        // Botón para procesar
+       
         btnProcesar = new JButton("Procesar");
         btnProcesar.setBounds(200, 70, 150, 30);
         getContentPane().add(btnProcesar);
 
-        // Etiqueta y campo de texto para el estado civil
+       
         JLabel lblEstadoCivil = new JLabel("Estado Civil:");
         lblEstadoCivil.setBounds(30, 110, 150, 30);
         getContentPane().add(lblEstadoCivil);
@@ -54,7 +54,7 @@ public class frm21 extends JFrame {
         txtEstadoCivil.setFocusable(false);
         getContentPane().add(txtEstadoCivil);
 
-        // Etiqueta y campo de texto para la edad
+        
         JLabel lblEdad = new JLabel("Edad:");
         lblEdad.setBounds(30, 150, 150, 30);
         getContentPane().add(lblEdad);
@@ -64,7 +64,7 @@ public class frm21 extends JFrame {
         txtEdad.setFocusable(false);
         getContentPane().add(txtEdad);
 
-        // Etiqueta y campo de texto para el sexo
+        
         JLabel lblSexo = new JLabel("Sexo:");
         lblSexo.setBounds(30, 190, 150, 30);
         getContentPane().add(lblSexo);
@@ -74,7 +74,7 @@ public class frm21 extends JFrame {
         txtSexo.setFocusable(false);
         getContentPane().add(txtSexo);
 
-        // Acción del botón Procesar
+       
         btnProcesar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -99,7 +99,7 @@ public class frm21 extends JFrame {
                 default: estado = "Desconocido"; break;
             }
 
-            // Determinar el sexo
+           
             String genero;
             if (sexo == 1) {
                 genero = "Masculino";
@@ -109,7 +109,7 @@ public class frm21 extends JFrame {
                 genero = "Desconocido";
             }
 
-            // Mostrar los resultados
+            
             txtEstadoCivil.setText(estado);
             txtEdad.setText(String.valueOf(edad));
             txtSexo.setText(genero);

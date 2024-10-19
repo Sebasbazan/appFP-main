@@ -22,14 +22,14 @@ public class frm30 extends JFrame {
     }
 
     public frm30() {
-        // Configuración de la ventana
+        
         setTitle("Cálculo de Cuotas Mensuales");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 350, 250);
         setLayout(null);
         setLocationRelativeTo(null);
 
-        // Etiqueta y campo de texto para la cuota
+        
         JLabel lblCuota = new JLabel("Cuota Mensual:");
         lblCuota.setBounds(30, 30, 150, 30);
         getContentPane().add(lblCuota);
@@ -38,7 +38,7 @@ public class frm30 extends JFrame {
         txtCuota.setBounds(180, 30, 100, 30);
         getContentPane().add(txtCuota);
 
-        // Etiqueta y campo de texto para el día de pago
+        
         JLabel lblDiaPago = new JLabel("Día de Pago:");
         lblDiaPago.setBounds(30, 70, 150, 30);
         getContentPane().add(lblDiaPago);
@@ -47,12 +47,12 @@ public class frm30 extends JFrame {
         txtDiaPago.setBounds(180, 70, 100, 30);
         getContentPane().add(txtDiaPago);
 
-        // Botón para calcular
+        
         btnCalcular = new JButton("Calcular");
         btnCalcular.setBounds(180, 110, 100, 30);
         getContentPane().add(btnCalcular);
 
-        // Etiqueta y campo de texto para el monto a pagar
+        
         JLabel lblMontoAPagar = new JLabel("Monto a Pagar:");
         lblMontoAPagar.setBounds(30, 150, 150, 30);
         getContentPane().add(lblMontoAPagar);
@@ -62,7 +62,7 @@ public class frm30 extends JFrame {
         txtMontoAPagar.setFocusable(false);
         getContentPane().add(txtMontoAPagar);
 
-        // Acción del botón Calcular
+       
         btnCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
